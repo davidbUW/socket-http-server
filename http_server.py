@@ -68,8 +68,7 @@ def parse_request(request):
 
     # TODO: implement parse_request
     method, path, version = request.split("\r\n")[0].split(" ")
-    print(method)
-    print(path)
+
     if method != "GET":
         raise NotImplementedError
 
