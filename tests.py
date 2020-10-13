@@ -1,7 +1,10 @@
+# import pytest
 import unittest
+import pytest
 import subprocess
 import http.client
 import os
+import time
 
 
 class WebTestCase(unittest.TestCase):
@@ -48,6 +51,7 @@ class WebTestCase(unittest.TestCase):
         conn.close()
 
         self.assertEqual(response.getcode(), 405)
+
 
 
     def test_get_sample_text_content(self):
@@ -190,7 +194,7 @@ class WebTestCase(unittest.TestCase):
 
     def test_ok_response_at_root_index(self):
         """
-        A call to / at least yields a 200 OK response 
+        A call to / at least yields a 200 OK response
         """
 
         directory = ''
